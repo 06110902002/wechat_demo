@@ -1,0 +1,93 @@
+.wrap {
+ /* height: auto;
+ position: relative; */
+ width: 100%;
+ direction: flex;
+ flex-direction: column;
+}
+.swipers {
+ height: 350rpx;
+ width: 100%;
+}
+.mid-swipers{
+ height:440rpx;
+ width: 100%;
+ margin-top: 20rpx;
+ background-color: #099099;
+}
+
+
+.slide-image {
+ display: block;
+ width: 100%;
+ height: 100%;
+}
+
+.mid-slide-menu {
+ display: block;
+ width: 25%;
+ height: 100%;
+}
+
+/*用来包裹所有的小圆点 */
+.dots {
+ width: 300rpx;
+ height: 5rpx;
+ display: flex;
+ flex-direction: row;
+ background: #000;
+ position: relative;
+ margin-top: -20rpx;
+ 
+}
+/*未选中时的小圆点样式 */
+.dot {
+ width: 100rpx;
+ height: 5rpx;
+ /* border-radius: 50%; */
+ /* margin-right: 26rpx; */
+ /* background-color: white; */
+}
+/*选中以后的小圆点样式 */
+.active {
+ width: 100rpx;
+ height: 5rpx;
+ background-color: coral;
+}
+
+.outer {
+  display: flex;
+  flex-direction: row;  
+  flex-wrap: wrap;
+  width: 1000rpx;
+  height: 100%;
+}
+
+.home_grids { 
+  border-top: 1rpx solid #D9D9D9;
+  overflow:hidden;
+  margin-top: 10px;
+}
+
+.home_grid{
+  position: relative;
+  float: left;
+  /* padding: 20px 10px; */
+  height: 220rpx;
+  display:flex; 
+  flex-direction: column;
+  justify-content:center; 
+  align-items:center;
+
+  width: 25%;
+  box-sizing: border-box; 
+  border-right:1rpx solid #D9D9D9;
+  border-bottom:1rpx solid #D9D9D9;
+}
+.home_icon{
+  width: 91rpx;
+  height: 91rpx;
+}
+.home_grid_text{
+  margin-top: 20rpx;
+}
