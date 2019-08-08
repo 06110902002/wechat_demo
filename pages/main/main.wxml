@@ -1,51 +1,133 @@
 
+<scroll-view scroll-y='true' style="height: 100%;">
 
-<view class="wrap">
+  <view class="wrap">
 
-  <swiper class="swipers" autoplay="{{autoplay}}" current="{{currentSwiper}}" bindchange="swiperChange"> 
-    <block wx:for="{{imgUrls}}"> 
-    <swiper-item> 
-      <image src="{{item}}" class="slide-image" width="100%" height="100rpx" ></image> 
-    </swiper-item> 
-    </block> 
-  </swiper> 
-  <!--滑块底部指示条的样式 -->
-  <view class="dots"> 
-    <block wx:for="{{imgUrls}}"> 
-      <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view> 
-    </block> 
-  </view> 
-
-  <!--中间菜单导航 -->
-  <swiper class="mid-swipers" > 
-     <swiper-item> 
-       <block wx:for="{{griddata}}" wx:key="item.name">
-          <navigator url="{{item.url}}" class='home_grid'>
-            <image src="{{item.img}}" class="home_icon" bindtap="onItemClick" data-postId='{{item.name}}'></image>
-            <view class="home_grid_text">{{item.name}}</view>
-          </navigator>
-        </block>
+    <swiper class="swipers" autoplay="{{autoplay}}" current="{{currentSwiper}}" bindchange="swiperChange"> 
+      <block wx:for="{{imgUrls}}"> 
+      <swiper-item> 
+        <image src="{{item}}" class="slide-image" width="100%" height="100rpx" ></image> 
       </swiper-item> 
+      </block> 
+    </swiper> 
+    <!--滑块底部指示条的样式 -->
+    <view class="dots"> 
+      <block wx:for="{{imgUrls}}"> 
+        <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view> 
+      </block> 
+    </view> 
 
-       <swiper-item> 
-        <block wx:for="{{griddata2}}" wx:key="item.name">
-            <navigator url="../{{item.url}}/{{item.url}}" class='home_grid'>
-              <image src="{{item.img}}" class="home_icon"></image>
+    <!--中间菜单导航 -->
+    <swiper class="mid-swipers" indicator-dots="true" indicator-color="white" indicator-active-color="red"> 
+      <swiper-item> 
+        <block wx:for="{{griddata}}" wx:key="item.name">
+            <navigator url="{{item.url}}" class='home_grid'>
+              <image src="{{item.img}}" class="home_icon" bindtap="onItemClick" data-postId='{{item.name}}'></image>
               <view class="home_grid_text">{{item.name}}</view>
             </navigator>
           </block>
-      </swiper-item>
-  </swiper> 
+        </swiper-item> 
+
+        <swiper-item> 
+          <block wx:for="{{griddata2}}" wx:key="item.name">
+              <navigator url="../{{item.url}}/{{item.url}}" class='home_grid'>
+                <image src="{{item.img}}" class="home_icon"></image>
+                <view class="home_grid_text">{{item.name}}</view>
+              </navigator>
+            </block>
+        </swiper-item>
+    </swiper> 
 
 
-  <!-- <block wx:for="{{griddata}}" wx:key="item.name">
-    <navigator url="../{{item.url}}/{{item.url}}" class='home_grid'>
-      <image src="{{item.img}}" class="home_icon"></image>
-      <view class="home_grid_text">{{item.name}}</view>
-    </navigator>
-  </block> -->
+
+    <!-- <block wx:for="{{griddata}}" wx:key="item.name">
+      <navigator url="../{{item.url}}/{{item.url}}" class='home_grid'>
+        <image src="{{item.img}}" class="home_icon"></image>
+        <view class="home_grid_text">{{item.name}}</view>
+      </navigator>
+    </block> -->
+
+    <view class="hot-topic">
+      <view class="hot-topic-txt">热议话题</view>
+
+
+      <!-- <view class='hot-topic_wrap'>
+          <swiper  >    
+            <block wx:for="{{imgUrls}}">             
+              <swiper-item>									
+                <view class='box'>						
+                  <image src='{{item}}'></image>
+                  <view class='content'>
+                    <text>测试</text>
+                  </view>
+                </view>
+              </swiper-item>
+            </block>
+          </swiper>
+      </view> -->
+
+        <scroll-view scroll-x='true' style="height: 200px;white-space: nowrap;">
+
+          <view class="scroll-view-item" >
+              <view class="tag-txt">正在讨论</view>
+
+              <view class="disscuss-pet-txt-img">
+                  <view class="disscuss-txt-parent">
+                      <view class="disscuss-txt">养宠物路的甜蜜暴击</view>
+                      <view class="disscuss-txt2">ta甜到你了吗?</view>
+                  </view>
+                
+                  <image src="./img/menu10.png" style="width:91rpx;height:91rpx;"></image>
+              </view>
+
+          </view>
+
+
+          <view class="scroll-view-item" >
+              <view class="tag-txt">正在讨论</view>
+              <view class="disscuss-pet-txt-img">
+                  <view class="disscuss-txt-parent">
+                      <view class="disscuss-txt">养宠物路的甜蜜暴击</view>
+                      <view class="disscuss-txt2">ta甜到你了吗?</view>
+                  </view>
+                
+                  <image src="./img/menu10.png" style="width:91rpx;height:91rpx;"></image>
+              </view>
+          </view>
+
+          <view class="scroll-view-item" >
+              <view class="tag-txt">正在讨论</view>
+              <view class="disscuss-pet-txt-img">
+                  <view class="disscuss-txt-parent">
+                      <view class="disscuss-txt">养宠物路的甜蜜暴击</view>
+                      <view class="disscuss-txt2">ta甜到你了吗?</view>
+                  </view>
+                
+                  <image src="./img/menu10.png" style="width:91rpx;height:91rpx;"></image>
+              </view>
+          </view>
+
+          <view class="scroll-view-item" >
+              <view class="tag-txt">正在讨论</view>
+              <view class="disscuss-pet-txt-img">
+                  <view class="disscuss-txt-parent">
+                      <view class="disscuss-txt">养宠物路的甜蜜暴击</view>
+                      <view class="disscuss-txt2">ta甜到你了吗?</view>
+                  </view>
+                
+                  <image src="./img/menu10.png" style="width:91rpx;height:91rpx;"></image>
+              </view>
+          </view>
+
+        </scroll-view>
+
+
+    </view>
+
+  </view>
 
 
 
+  <view style="height:200px">1234</view>
 
-</view>
+</scroll-view>

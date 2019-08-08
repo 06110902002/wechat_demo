@@ -91,3 +91,103 @@
 .home_grid_text{
   margin-top: 20rpx;
 }
+
+.hot-topic{
+  flex-direction: column;
+  height: 400rpx;
+  margin-top:100rpx;
+  background-color: #333666;
+  overflow:hidden; /*当了元素margin-top无效时，使用此属性*/
+}
+.hot-topic-txt{
+  margin-left: 20rpx;
+  margin-top:20rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+
+}
+
+
+.hot-topic_wrap{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+swiper{
+  height: 100%;
+}
+.content{
+  font-size: 16px;
+  color: #333;
+  padding: 20rpx 40rpx;
+  position: relative;
+  display: flex;
+}
+swiper-item{							
+  text-align: center;				   
+}
+swiper-item image{
+  width: 100%;
+}
+.box{								
+  width: 80%;
+  height: 700rpx;
+  display: inline-block;
+  flex-direction: column;
+  margin-top: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 4px 4px #f2f2f2;  
+}
+
+.scroll-view-item{
+  display: inline-block;  /*横向滚动必须项*/
+  height:160rpx;
+  width: 360rpx;
+  margin-right: 40rpx;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+  background-color:white;
+}
+.tag-txt{
+  width: 80rpx;
+  background: red;
+  color: white;
+  font-size: 18rpx;
+  padding: 5rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5rpx;
+}
+.disscuss-pet-txt-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  flex-direction: row;
+  height:100%;
+  background-color: white;
+}
+.disscuss-txt-parent{
+  display: flex;
+  align-items: left;
+  justify-content: center;  /*垂直居中*/
+  flex-direction: column;
+  height:100%;
+  margin-right: 15rpx;
+}
+
+.disscuss-txt{
+  
+  font-size:24rpx;
+  font-weight: bold;
+
+}
+.disscuss-txt2{
+  
+  font-size:18rpx;
+  color:gray;
+  margin-top:15rpx;
+}
+
