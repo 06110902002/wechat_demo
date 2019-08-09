@@ -95,14 +95,13 @@
 .hot-topic{
   flex-direction: column;
   height: 400rpx;
-  margin-top:100rpx;
-  background-color: #333666;
+  background-color: lightgray;
   overflow:hidden; /*当了元素margin-top无效时，使用此属性*/
 }
 .hot-topic-txt{
   margin-left: 20rpx;
   margin-top:20rpx;
-  font-size: 50rpx;
+  font-size: 40rpx;
   font-weight: bold;
 
 }
@@ -190,4 +189,79 @@ swiper-item image{
   color:gray;
   margin-top:15rpx;
 }
+.content-name-time{
+  display:flex;
+  align-items:center;
+  flex-direction:row;
+  height:80rpx;
+  margin:20rpx;
+  background:gray;
+
+}
+.article-txt-box{
+  margin: 20rpx;
+  box-sizing:border-box;
+  font-size:20rpx;
+  overflow:hidden;
+  text-overflow: ellipsis;/*超出省略号*/
+  display:-webkit-box;/*一定要写*/
+  -webkit-line-clamp: 4;/*控制行数*/
+  -webkit-box-orient: vertical;/*一定要写*/
+  background-color:#abc888; 
+
+}
+.article-img{
+  display:flex;
+  /* align-items:center; */
+  flex-direction:row;
+  margin-left:20rpx;
+  margin-right:20rpx;
+  height:180rpx;
+  justify-content:space-between;
+  background-color:#bb0099;
+
+  position: relative;/*相对定位，子元素的absolute才能生效*/
+}
+
+
+.imgline {
+   width:180rpx;
+   height:180rpx;
+   position: relative;/*相对定位，子元素的absolute才能生效*/
+}
+
+.cancelI {
+   position: absolute;/*父元素的position位置固定，这个绝对定位才会生效*/
+   right: 2px;/*位于父元素的右边 2px*/
+   left: auto;
+   top: 10px;
+}
+
+.item_txt {
+   position: absolute;
+   bottom: 0px;
+   left: 0px;
+   width: 100%;
+   height: 25px;
+   font-size: 13px;
+   background-color: #999;
+   color: white;
+   text-align: center; /*这两行保证文本在text中水平垂直居中*/
+   line-height: 25px; /*也可以使用*/
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   justify-content:center;
+}
+.like-comments{
+  flex-direction: row-reverse;
+  margin-left:20rpx;
+  margin-right:20rpx;
+  height:125rpx;
+  display:flex;
+  align-items:center;
+  background-color: #998877;
+}
+
+
 

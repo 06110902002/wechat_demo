@@ -1,0 +1,48 @@
+
+<template name = 'article_item'>
+    <view style="height:600rpx;background-color:green;">
+          <!--名字与时间-->
+          <view class="content-name-time">
+              <image src="./img/menu1.png" style="width:45rpx;height:45rpx;"></image>
+              <view style="margin-left:20rpx;font-size:20rpx;">韦小宝</view>
+
+              <!--填充视图-->
+              <view style="flex-grow:2;height:10rpx;background-color:blue;"></view>
+
+              <view style="font-size:20rpx;;">2小时前</view>
+
+          </view>
+
+          <!--文章标题-->
+          <view style='margin-left:20rpx;font-size:30rpx;font-weight: bold;'>给小白的3岁生日大餐</view>
+
+          <!--文章内容简介-->
+          <view class="article-txt-box">
+            马路上此起彼伏的车鸣声，夹杂着凄凄惨惨的雨滴，倒也洗去了城市街头的龌蹉与浊尘。我无力地将头靠在起雾的车窗一角，无神的眼         眸，望向远方，默默承受着会呼吸的伤和痛.在失去点点后，我曾一度伤心好几周，每当看见它熟悉的玩偶和那独有的小窝时，
+            心就被揪似的疼。不知为何，我突然萌生出再也不想养狗的想法，是的，我很爱狗狗，但是，我更怕这种一辈子也无法抹去的伤痕
+          </view>
+
+          <!--文章图片-->
+          <view class="article-img">
+              <image src="./img/menu10.png" style="width:180rpx;height:180rpx;"></image>
+              <image src="./img/menu11.png" style="width:180rpx;height:180rpx;"></image>
+              <view class='imgline'>
+                  <image bindtap='tapImg' src="./img/menu10.png" style="width:180rpx;height:180rpx;"></image>
+                  <icon type='cancel'  color='red' size='20' class='cancelI' ></icon>
+                  <text class='item_txt'  bindtap='tapAddLabel'>3图</text>
+              </view>
+          </view>
+          
+          <!--赞与评论-->
+          <view class="like-comments"> 
+            <text style='font-size:24rpx;margin-left:10rpx'>2评论</text>
+            <image src="./img/menu10.png" style="width:40rpx;height:40rpx;"></image>
+
+            <text style='font-size:24rpx;margin-left:10rpx;margin-right:50rpx;'>5赞</text>
+            <image src="./img/menu10.png" style="width:40rpx;height:40rpx;"></image>
+
+          </view>
+
+      </view> 
+
+</template>

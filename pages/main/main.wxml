@@ -22,7 +22,7 @@
       <swiper-item> 
         <block wx:for="{{griddata}}" wx:key="item.name">
             <navigator url="{{item.url}}" class='home_grid'>
-              <image src="{{item.img}}" class="home_icon" bindtap="onItemClick" data-postId='{{item.name}}'></image>
+              <image src="{{item.img}}" class="home_icon" bindtap="onItemClick" data-name='{{item.name}}'></image>
               <view class="home_grid_text">{{item.name}}</view>
             </navigator>
           </block>
@@ -34,7 +34,7 @@
                 <image src="{{item.img}}" class="home_icon"></image>
                 <view class="home_grid_text">{{item.name}}</view>
               </navigator>
-            </block>
+          </block>
         </swiper-item>
     </swiper> 
 
@@ -66,7 +66,7 @@
           </swiper>
       </view> -->
 
-        <scroll-view scroll-x='true' style="height: 200px;white-space: nowrap;">
+        <scroll-view scroll-x='true' style="height: 235rpx;white-space: nowrap;">
 
           <view class="scroll-view-item" >
               <view class="tag-txt">正在讨论</view>
@@ -121,13 +121,88 @@
 
         </scroll-view>
 
-
+        <view class="hot-topic-txt">推荐内容</view>
+        
     </view>
 
   </view>
 
+  
+
+  <block wx:for="{{like_comments}}" wx:key="{{item.name}}">
+      <!--推荐内容item内容-->
+      <view style="background-color:green;" bindtap="goDetailArticle" data-articleid="{{item.content}}">
+          <!--名字与时间-->
+          <view class="content-name-time" >
+              <image src="{{item.headImg}}" style="width:45rpx;height:45rpx;"></image>
+              <view style="margin-left:20rpx;font-size:20rpx;">{{item.nick}}</view>
+
+              <!--填充视图-->
+              <view style="flex-grow:2;height:10rpx;background-color:blue;"></view>
+
+              <view style="font-size:20rpx;;">{{item.lasttime}}</view>
+
+          </view>
+
+          <!--文章标题-->
+          <view style='margin-left:20rpx;font-size:30rpx;font-weight: bold;'>{{item.title}}</view>
+
+          <!--文章内容简介-->
+          <view class="article-txt-box">{{item.content}}</view>
+
+          <!--文章图片-->
+          <view class="article-img">
+
+              <block wx:for="{{item.imgs}}" wx:key='' wx:for-item="contentImgs" wx:for-index='imgIndex'>
+
+                  <view wx:if="{{item.imgs.length <= 3}}">
+                      <image wx:if="{{imgIndex < item.imgs.length - 1}}" src="{{contentImgs}}" style="width:180rpx;height:180rpx;"></image>
+                      <view wx:elif="{{imgIndex == item.imgs.length - 1}}" class='imgline'>
+                        <image bindtap='tapImg' src="{{contentImgs}}" style="width:180rpx;height:180rpx;"></image>
+                        <icon type='cancel'  color='red' size='20' class='cancelI' ></icon>
+                        <text class='item_txt'  bindtap='tapAddLabel'>{{item.imgs.length}}图</text>
+                      </view>
+
+                  </view> 
+
+                  <view wx:else>
+                      <image wx:if="{{imgIndex < 2}}" src="{{contentImgs}}" style="width:180rpx;height:180rpx;"></image>
+
+                      <view wx:elif="{{imgIndex == 2}}" class='imgline'>
+                          <image bindtap='tapImg' src="{{contentImgs}}" style="width:180rpx;height:180rpx;"></image>
+                          <icon type='cancel'  color='red' size='20' class='cancelI' ></icon>
+                          <text class='item_txt'  bindtap='tapAddLabel'>{{item.imgs.length}}图</text>
+                      </view>
+                  
+                  </view>
+
+                  
+
+              </block> 
+
+          </view>
+          
+          <!--赞与评论-->
+          <view class="like-comments"> 
+            <text style='font-size:24rpx;margin-left:10rpx'>{{item.comments}}评论</text>
+            <image src="./img/menu10.png" style="width:40rpx;height:40rpx;"></image>
+
+            <text style='font-size:24rpx;margin-left:10rpx;margin-right:50rpx;'>{{item.like}}赞</text>
+            <image src="./img/menu10.png" style="width:40rpx;height:40rpx;"></image>
+
+          </view>
+
+      </view> 
+
+        
 
 
-  <view style="height:200px">1234</view>
+
+
+  </block>
+
+  
+
+
 
 </scroll-view>

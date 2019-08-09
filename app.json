@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/main/main",
-    "pages/menupage/normalMenu"
+    "pages/menupage/normalMenu",
+    "pages/detail_article/detailArticle"
   ],
   "window": {
     "backgroundTextStyle": "light",
