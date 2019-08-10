@@ -1,0 +1,11 @@
+<view class='header'>这里是header</view>
+
+
+<!-- <view class='section-header'>这是section-header</view>  -->
+
+<view class='{{fixed ? "section-header section-fixed": "section-header"}}'>这是section-header</view>
+<!-- <view hidden='{{!fixed}}' class="section-header section-placeholder"></view>  -->
+
+<block wx:for="{{testData}}">
+  <view class='section-cell'>{{item}}</view>
+</block>

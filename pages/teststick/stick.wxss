@@ -1,0 +1,28 @@
+.header {
+  height: 300rpx;
+  width: 750rpx;
+  background-color: bisque;
+  margin-bottom: 10rpx;
+}
+
+.section-header {
+  height: 80rpx;
+  width: 750rpx;
+  background-color: rebeccapurple;
+}
+
+.section-cell {
+  height: 180rpx;
+  width: 750rpx;
+  background-color: gold;
+  margin-top: 10rpx;
+}
+
+.section-placeholder {
+  background-color: white;
+}
+
+.section-fixed {
+  position: fixed;
+  top: 0;
+}
