@@ -1,1 +1,66 @@
 /* pages/detail_article/detailArticle.wxss */
+.statusBarStyle{
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+}
+.club{
+  font-size:24rpx;
+  background-color:lightgray;
+  border-radius:30rpx;
+  padding-left:30rpx; 
+  padding-right:30rpx;
+  padding-top:10rpx;
+  padding-bottom: 10rpx;
+  
+}
+.cirlce-img{
+  border-radius:50rpx;
+  height:100rpx;
+  width:100rpx;
+}
+.louzhu{
+  margin-left:20rpx;
+  font-size:22rpx;
+  border-radius:15rpx;
+  background-color:red;
+  padding: 10rpx;
+  color: white;
+  
+}
+.send-msg{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height:100rpx;
+  background-color: green;
+}
+
+
+
+
+.pocket_input {
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  background-color: gray;
+  overflow: hidden;
+  display: flex;
+ 
+  flex-direction: column;
+}
+
+.input_style{
+height: 80rpx;
+flex-grow: 1;
+background-color: #F4F5F6;
+font-size: 30rpx;
+border-radius: 20rpx;
+padding-left: 15rpx;
+
+}
+.input-placeholder{
+  margin-left: 25rpx;
+}

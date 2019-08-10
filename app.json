@@ -1,13 +1,14 @@
 {
   "pages": [
+    "pages/detail_article/detailArticle",
     "pages/main/main",
-    "pages/menupage/normalMenu",
-    "pages/detail_article/detailArticle"
+    "pages/menupage/normalMenu"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "小猫难养",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

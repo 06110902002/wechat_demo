@@ -131,7 +131,7 @@
 
   <block wx:for="{{like_comments}}" wx:key="{{item.name}}">
       <!--推荐内容item内容-->
-      <view style="background-color:green;" bindtap="goDetailArticle" data-articleid="{{item.content}}">
+      <view style="background-color:green;" bindtap="goDetailArticle" data-articleid="{{item.articlId}}">
           <!--名字与时间-->
           <view class="content-name-time" >
               <image src="{{item.headImg}}" style="width:45rpx;height:45rpx;"></image>

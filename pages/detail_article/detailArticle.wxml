@@ -1,2 +1,64 @@
 <!--pages/detail_article/detailArticle.wxml-->
-<text>pages/detail_article/detailArticle.wxml</text>
+
+<view style="margin-left:20rpx;margin-right:20rpx;">
+        <!-- 沉浸栏 -->
+        <view style="width:100%;height:{{statusBarHeight}}px"></view>
+        <!-- 标题栏 这里就可以自定义写标题 -->
+        <view class="statusBarStyle" bindtap="back">
+            <image src="../img/back.png" style="width:30rpx;height:60rpx;"></image>
+            <text style="margin-left:20rpx;">帖子详情</text>
+        </view>
+
+
+        <view style="width:100%;height:1rpx;background-color:gray;margin-top:10rpx;"></view>
+
+        <view style="font-size:38rpx;margin-top:20rpx;">小七与咩咩的约会</view>
+
+        <view style="height: 70rpx;align-items: center;display: flex;">
+          <label class="club">金毛俱乐部</label>
+        </view>
+
+        <!--楼主信息-->
+        <view style="align-items: center;display: flex;">
+            <image src='../main/img/dog1.jpg' class="cirlce-img"></image>
+            <text style="margin-left:20rpx;font-size:26rpx;">七仔</text>
+            <text class="louzhu">楼主</text>
+            <!--填充视图-->
+            <view style="flex-grow:1;height:10rpx;"></view>
+            <text style="margin-right:40rpx;font-size:22rpx;">1楼</text>
+        </view>
+
+        <view style="margin-right:20rpx;font-size:26rpx;">
+          大老远跑来草原遛狗,没想到小七是这样的汪，竟然看上了小咩咩，没事儿子你上！搞定了咱们晚上就可以吃烤全样
+        </view>
+
+        <image src="../img/test.gif" style="width:100rpx;height:100rpx;"></image>
+
+        <!--留言回复区-->
+        <view class='pocket_input' style='bottom:{{height}}px;'>
+            <!--输入法视图-->
+            <view style="width:100%;align-items: center;display: flex">
+                 <input type='text' class='input_style' placeholder='随便说点什么吧~(30字以内哦)'  
+                  maxlength='30' bindfocus="bindfocus" bindblur="bindblur" bindconfirm="bindconfirm">
+                </input>
+
+                <image src="../main/img/menu1.png" style="width:90rpx;height:90rpx;margin-left:20rpx;margin-right:20rpx" bindtap="selecImg"></image>
+
+                <text class="louzhu" style="margin-right:40rpx">发送</text>
+            </view>
+
+            <!--选择图片视图-->
+            <view wx:if="{{isShowSelectPic}}" style="height:200rpx;">
+                <image src="{{selectImgPath}}" style="width:90rpx;height:90rpx;"></image>
+            </view>
+
+        </view>
+
+         
+
+
+</view>
+
+
+
+
