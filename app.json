@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/petscene/petScene",
     "pages/teststick/stick",
     "pages/main/main",
     "pages/menupage/normalMenu",

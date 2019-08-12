@@ -11,7 +11,19 @@ Page({
     //页面滚动距离
     scrollTop: 0,
     //是否悬停
-    fixed: false
+    fixed: false,
+
+    catTips:[
+      '纠正拆家', '猫狗相处', '乱拉乱尿', '如何养家',
+      '挑食', '环境消毒', '疫苗免疫', '体外驱虫',
+      '体内驱虫', '独自在家', '洗澡清洁', '毛发梳理'
+    ],
+
+    sectionItemsArray:[
+      '讨论','问答','医院','商品'
+    ],
+    sectionHeadSelectIndex:0,
+
   },
 
   /**
@@ -32,7 +44,8 @@ Page({
       that.setData({
         //section header 距离 ‘当前顶部’ 距离
         sectionHeaderLocationTop: res.top
-      })
+      });
+      console.log("36-----------:"+res.top);
     }).exec()
   },
 
@@ -51,6 +64,18 @@ Page({
         fixed: false
       })
     }
+  },
+
+  onLabelItemClick: function (event){
+    wx.showToast({
+      title: event.target.dataset.itemid + "",  
+    })
+  },
+  onMenuItemClick:function(event){
+  
+    this.setData({
+      sectionHeadSelectIndex: event.currentTarget.dataset.curindex
+    });
   },
 
   /**

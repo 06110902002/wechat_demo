@@ -1,15 +1,72 @@
 .header {
-  height: 300rpx;
-  width: 750rpx;
-  background-color: bisque;
+  height: 400rpx;
+  width: 100%;
+  background-color: white;
   margin-bottom: 10rpx;
+
+}
+.search-head{
+  margin: 20rpx;
+  height:80rpx;
+  border-radius:40rpx;
+  background-color: #909099;
+  display: flex; 
+  align-items:center;
+
+}
+.label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  background-color:white;  
+  padding-left:20rpx;
+  padding-top: 20rpx;
+  
+}
+
+.label-item {
+  
+  height: 50rpx;
+  line-height: 51rpx;
+  padding-left: 21rpx;
+  padding-right: 21rpx;
+  margin-right: 20rpx;
+  margin-bottom: 18rpx;
+  font-size: 25rpx;
+  color: #2e2e2e;
+  text-align: center;
+  background-color: lightgray;
+  border-radius: 25px;
+  
+}
+
+.label-item__hover {
+  color: white;
+  background-color: #2e2e2e;
 }
 
 .section-header {
-  height: 80rpx;
-  width: 750rpx;
-  background-color: rebeccapurple;
+  height: 120rpx;
+  width: 100%;
+  background-color: lightgray;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items:center;
 }
+.section-header-item{
+  font-size: 30rpx;
+  flex-direction: column;
+  display: flex;
+  align-items:center;
+}
+.section-header-item-select{
+  font-size: 30rpx;
+  color: red;
+}
+
 
 .section-cell {
   height: 180rpx;
@@ -25,4 +82,6 @@
 .section-fixed {
   position: fixed;
   top: 0;
+
+  width: 100%;
 }

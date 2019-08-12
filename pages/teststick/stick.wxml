@@ -1,9 +1,46 @@
-<view class='header'>这里是header</view>
+<view class='header'>
+    <!--搜索框-->
+    <view class="search-head">
+        <image src="../img/ic_search.png" style="width:60rpx;height:60rpx;margin-left:20rpx;"></image>
+        <input placeholder="搜索"></input>
+    </view>
+
+    <view class="label">
+        <view class="label-item" wx:for="{{catTips}}" wx:for-index="index" wx:for-item="item" data-itemid="{{item}}"
+        wx:key="{{index}}" hover-class="label-item__hover" hover-stay-time="100" bindtap="onLabelItemClick" >
+          {{item}}
+        </view>
+    </view>
+    
+    <!--更多-->
+    <view style="display:flex;align-items:center; justify-content: center;">
+         <view  class="label-item" style="width:100rpx;">
+          <text >更多</text>
+          <image src="../img/notice_to_right.png" style="width:20rpx;height:20rpx;margin-left:10rpx;"></image>
+        </view>
+    </view>
+   
+</view>
+
 
 
 <!-- <view class='section-header'>这是section-header</view>  -->
 
-<view class='{{fixed ? "section-header section-fixed": "section-header"}}'>这是section-header</view>
+<view class='{{fixed ? "section-header section-fixed": "section-header"}}'>
+    <view class="section-header-item" wx:for="{{sectionItemsArray}}" style="width:{{1.0 / sectionItemsArray.length * 100}}%;"
+          wx:for-index="index" wx:for-item="item" 
+          data-curindex="{{index}}" wx:key="{{index}}"   bindtap="onMenuItemClick" >
+
+          <text class="{{index == sectionHeadSelectIndex? 'section-header-item-select':''}}">{{item}}</text>
+
+          <view style="background-color:red;height:6rpx;width:80%;" hidden="{{index != sectionHeadSelectIndex}}">
+          </view>
+
+    </view>
+
+    
+
+</view>
 <!-- <view hidden='{{!fixed}}' class="section-header section-placeholder"></view>  -->
 
 <block wx:for="{{testData}}">
