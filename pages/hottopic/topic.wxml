@@ -1,0 +1,28 @@
+<!--pages/hottopic/topic.wxml-->
+<image src="../img/diy.jpg" style="width:100%;height:400rpx;"></image>
+<text style="font-size:28rpx;margin-left:20rpx;">秀出你DIY过的宠物美食</text>
+
+<view class="detail-text" style="height:{{detail_txt_height}}rpx;">
+  首先，我们要准备一些食材，包括:包包菜（南方也这么叫么？）、鸡肉、胡罗卜、鸡蛋黄（因为我不爱吃鸡蛋黄，所以鸡蛋清不会浪费）、牛肉（如果财政支出不允许也可以省略哦）、玉米面、黄豆面。
+  其中最后两样是最重要的！那就是玉米面和黄豆面！当然也可以换成别的豆面，宗旨都是为了让狗狗能够获得更多的营养。
+  关于榨汁机，或者搅拌机或者类似的这种工具，其实都可以用在制作狗粮上，因为不管是汁水会不会分离出来，只要把所有的材料搅拌到一起就  好，什么都不会浪费的！
+</view>
+
+<view class="detail" bindtap="onExtend">
+  <text style="color:blue;font-size:28rpx;">查看详情</text>
+  <image src="../img/part_arrows_down.png" style="width:30rpx;height:20rpx;"></image>
+</view>
+
+<view class="pet-food-topic">
+    <block wx:for="{{testData}}">
+        <view style="margin-top:20rpx;" bindtap="onItemClick" data-curindex="{{index}}">{{item}}</view>
+    </block>
+</view>
+<view class="index-line-bg">
+    <view class="index-line" style="margin-left:{{indexLineOffSetX}}px" animation="{{ani}}"></view>
+</view>
+
+
+
+
+

@@ -1,8 +1,10 @@
 {
   "pages": [
+    "pages/main/main",
+    "pages/hottopic/topic",
+    
     "pages/petscene/petScene",
     "pages/teststick/stick",
-    "pages/main/main",
     "pages/menupage/normalMenu",
     "pages/detail_article/detailArticle"
     

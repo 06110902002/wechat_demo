@@ -2,7 +2,7 @@
   <!--左侧栏-->
   <scroll-view class='scroll_left' scroll-y="true">
     <view class="nav_left"> 
-      <block wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName" wx:key="*this">  
+      <block wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName" wx:key="{{index}}">  
         <!--当前项的id等于item项的id，那个就是当前状态-->  
         <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开右侧侧滑栏使用-->  
         <view class="nav_left_items {{curNav == idx ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}" id="{{idx}}">{{itemName[0].name}}</view>  
@@ -20,10 +20,10 @@
     <view class="nav_right"> 
 
 
-      <view class='mink' wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName" wx:key="*this" bindscroll="scrollTop">
+      <view class='mink' wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName" wx:key="{{itemName[0].name}}" bindscroll="scrollTop">
         <view class='minl' id='{{idx}}'>{{itemName[0].name}}</view>
 
-          <block wx:for="{{itemName}}" wx:for-index="idex" wx:key="*this" > 
+          <block wx:for="{{itemName}}" wx:for-index="idex" wx:key="{{index}}" > 
             <view class="nav_right_items" wx:if="{{idex>0}}">  
               <navigator url="../detail/detail" hover-class="other-navigator-hover">
                 <image src="{{item.picture}}"></image>

@@ -1,0 +1,42 @@
+/* pages/hottopic/topic.wxss */
+
+.detail-text{
+  font-size:28rpx;
+  margin-left:20rpx;
+  padding-left:20rpx;
+  padding-right:20rpx;
+  /* height: 120px; */
+
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 1; */
+  -webkit-box-orient: vertical;
+  word-break: break-all; /* 追加这一行代码 */
+}
+
+.detail{
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pet-food-topic{
+  height:100rpx;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  
+}
+.index-line-bg{
+    background-color:gray;
+    height:6rpx;
+    display: flex;
+    align-items: center;
+}
+.index-line{
+  background-color:#ecbcae;
+  height:6rpx;
+  width:25%
+}

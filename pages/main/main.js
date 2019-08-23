@@ -13,8 +13,8 @@ Page({
 
 
     griddata:[
-      {name: 'A', img:'./img/menu1.png', url:'../menupage/normalMenu'},
-      {name: 'B', img: './img/menu2.png', url: 'tt'},
+      {name: 'A', img:'./img/menu1.png', url:'../petscene/petScene'},
+      { name: 'B', img: './img/menu2.png', url:'../teststick/stick'},
       {name: 'C', img: './img/menu3.png', url: 'tt'},
       {name: 'D', img: './img/menu4.png', url: 'tt' },
       {name: 'e', img: './img/menu4.png', url: 'tt' },
